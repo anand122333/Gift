@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jai Shree </title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 50%, #f5f0eb 100%);
+            overflow: hidden;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Soft Floating Circles */
+        .circle {
+            position: fixed;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: floatCircle 20s ease-in-out infinite;
+        }
+
+        .circle:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, #f8e1d4, transparent);
+            top: -100px;
+            left: -100px;
+            animation-delay: 0s;
+        }
+
+        .circle:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, #e8d5c4, transparent);
+            bottom: -150px;
+            right: -150px;
+            animation-delay: -5s;
+        }
+
+        .circle:nth-child(3) {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #f0e6dc, transparent);
+            top: 50%;
+            left: 10%;
+            animation-delay: -10s;
+        }
+
+        .circle:nth-child(4) {
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, #ecdcc8, transparent);
+            top: 20%;
+            right: 10%;
+            animation-delay: -15s;
+        }
+
+        @keyframes floatCircle {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -30px) scale(1.05); }
+            50% { transform: translate(-20px, 20px) scale(0.95); }
+            75% { transform: translate(20px, 10px) scale(1.02); }
+        }
+
+        /* Main Container */
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Divine Symbol */
+        .symbol {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: gentle-glow 3s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        @keyframes gentle-glow {
+            0%, 100% { 
+                transform: scale(1);
+                filter: drop-shadow(0 0 10px rgba(210, 180, 140, 0.3));
+            }
+            50% { 
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 25px rgba(210, 180, 140, 0.5));
+            }
+        }
+
+        /* Main Title */
+        .title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 9rem;
+            color: #8b7355;
+            text-shadow: 
+                0 2px 4px rgba(139, 115, 85, 0.1),
+                0 4px 8px rgba(139, 115, 85, 0.05);
+            animation: fadeInUp 2s ease-out, shimmer 4s ease-in-out infinite;
+            letter-spacing: 5px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shimmer {
+            0%, 100% { 
+                color: #8b7355;
+            }
+            50% { 
+                color: #a08060;
+            }
+        }
+
+        /* Decorative Line */
+        .line {
+            width: 150px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #c4a882, transparent);
+            margin: 30px auto;
+            position: relative;
+        }
+
+        .line::before {
+            content: '✦';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: #c4a882;
+            font-size: 0.8rem;
+            background: linear-gradient(135deg, #fdfcfb, #f5f0eb);
+            padding: 0 15px;
+        }
+
+        /* Subtitle */
+        .subtitle {
+            font-size: 1.3rem;
+            color: #a89070;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            font-weight: 300;
+            animation: fadeInUp 2s ease-out 0.5s both;
+        }
+
+        /* Floating Petals */
+        .petal {
+            position: fixed;
+            font-size: 1.5rem;
+            opacity: 0.4;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.4;
+            }
+            90% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 5rem;
+            }
+            .symbol {
+                font-size: 3rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+                letter-spacing: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Soft Background Circles -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="title">Jai Shree</h1>
+        <div class="line"></div>
+        <p class="subtitle">I never knew magic until I met you</p>
+    </div>
+
+    <script>
+        // Create Floating Petals
+        const petals = ['🌸', '✨', '❀', '✿', '💮'];
+        
+        for (let i = 0; i < 15; i++) {
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+            petal.textContent = petals[Math.floor(Math.random() * petals.length)];
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.animationDuration = (Math.random() * 10 + 15) + 's';
+            petal.style.animationDelay = (Math.random() * 15) + 's';
+            petal.style.fontSize = (Math.random() * 1 + 1) + 'rem';
+            document.body.appendChild(petal);
+        }
+    </script>
+</body>
+</html>
